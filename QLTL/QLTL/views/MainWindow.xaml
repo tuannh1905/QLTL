@@ -1,0 +1,57 @@
+﻿<Window x:Class="QLTL.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="HỆ THỐNG QUẢN LÝ THỦY LỢI" Height="700" Width="1200"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="280"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" Background="#2C3E50">
+            <DockPanel>
+                <TextBlock Text="MENU CHỨC NĂNG" DockPanel.Dock="Top" Foreground="White" 
+                           FontSize="18" FontWeight="Bold" Margin="20,20,0,20"/>
+
+                <Button DockPanel.Dock="Bottom" Content="Đăng xuất" Height="40" Margin="10"
+                        Background="#E74C3C" Foreground="White" FontWeight="Bold"
+                        Click="BtnLogout_Click"/>
+
+                <TreeView Name="MenuTree" Background="Transparent" BorderThickness="0" 
+                          Foreground="White" FontSize="14" Margin="10,0"
+                          SelectedItemChanged="MenuTree_SelectedItemChanged">
+                    <TreeView.Resources>
+                        <Style TargetType="TreeViewItem">
+                            <Setter Property="IsExpanded" Value="False"/>
+                            <Setter Property="Padding" Value="5,8"/>
+                            <Setter Property="Foreground" Value="White"/>
+                        </Style>
+                    </TreeView.Resources>
+
+                    <TreeViewItem Header="1. QUẢN TRỊ HỆ THỐNG">
+                        <TreeViewItem Header="1.1 Đơn vị hành chính" Tag="Admin_DonVi"/>
+                        <TreeViewItem Header="1.5 Quản lý người dùng" Tag="Admin_User"/>
+                        <TreeViewItem Header="1.17 Lịch sử truy cập" Tag="Admin_History"/>
+                    </TreeViewItem>
+
+                    <TreeViewItem Header="2. CSDL CÔNG TRÌNH THỦY LỢI" IsExpanded="True">
+                        <TreeViewItem Header="2.1 Quy hoạch &amp; Bản đồ" Tag="Fac_Planning"/>
+                        <TreeViewItem Header="2.2 Danh sách Công trình" Tag="Fac_List"/>
+                        <TreeViewItem Header="2.2.15 Diện tích tưới" Tag="Fac_Irrigation"/>
+                        <TreeViewItem Header="2.2.22 Thống kê báo cáo" Tag="Fac_Report"/>
+                    </TreeViewItem>
+                </TreeView>
+            </DockPanel>
+        </Border>
+
+        <Grid Grid.Column="1" Background="#ECF0F1">
+            <Border Background="White" Margin="10" CornerRadius="5">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="10" Color="#CCC" ShadowDepth="0"/>
+                </Border.Effect>
+                <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>
