@@ -3,13 +3,15 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       Title="Danh sách công trình" 
       Loaded="Page_Loaded">
+
     <Grid Margin="20" Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="DANH SÁCH CÔNG TRÌNH THỦY LỢI" 
+        <TextBlock x:Name="lblTitle" 
+                   Text="DANH SÁCH CÔNG TRÌNH THỦY LỢI" 
                    FontSize="24" FontWeight="Bold" Foreground="#2C3E50"
                    HorizontalAlignment="Center" Margin="0,0,0,20"/>
 
@@ -23,11 +25,8 @@
 
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding CongTrinhID}" Width="50"/>
-
                 <DataGridTextColumn Header="Loại CT" Binding="{Binding LoaiCongTrinh}" Width="150" FontWeight="Bold"/>
-
                 <DataGridTextColumn Header="Địa điểm" Binding="{Binding DiaDiem}" Width="250"/>
-
                 <DataGridTextColumn Header="Mô tả chi tiết" Binding="{Binding MoTa}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>

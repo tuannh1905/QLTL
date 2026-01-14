@@ -1,11 +1,15 @@
-﻿using MySql.Data.MySqlClient;
-using System.Data;
+﻿using System.Data;
+using MySql.Data.MySqlClient;
+using System.Windows; // Thư viện để dùng MessageBox
 
 namespace QLTL.database
 {
     public class Database
     {
-        private string connectionString = "Server=quanlythuyloi;Database=qaunlythuyloi;Uid=root;Pwd=Ta19050500@;Charset=utf8;";
+        // --- CẤU HÌNH KẾT NỐI ---
+        // Lưu ý: Sửa '123456' thành mật khẩu MySQL trên máy bạn.
+        // Nếu dùng XAMPP mặc định thì xóa '123456' đi (để trống: Pwd=;)
+        private string connectionString = "Server=127.0.0.1;Database=QuanLyThuyLoi;Uid=root;Pwd = Ta19050500@;Charset=utf8;";
 
         public MySqlConnection Connection { get; set; }
 
@@ -13,6 +17,8 @@ namespace QLTL.database
         {
             Connection = new MySqlConnection(connectionString);
         }
+
+        // Hàm mở kết nối
         public bool OpenConnection()
         {
             try
@@ -25,10 +31,13 @@ namespace QLTL.database
             }
             catch (MySqlException ex)
             {
-                System.Diagnostics.Debug.WriteLine("Lỗi kết nối: " + ex.Message);
+                // Hiện bảng thông báo lỗi cụ thể để biết đường sửa
+                MessageBox.Show("Lỗi kết nối MySQL: " + ex.Message, "Lỗi Hệ Thống");
             }
             return false;
         }
+
+        // Hàm đóng kết nối
         public void CloseConnection()
         {
             if (Connection.State == ConnectionState.Open)

@@ -26,12 +26,18 @@
                             <Setter Property="IsExpanded" Value="False"/>
                             <Setter Property="Padding" Value="5,8"/>
                             <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="FontSize" Value="14"/>
                         </Style>
                     </TreeView.Resources>
 
-                    <TreeViewItem Header="1. QUẢN TRỊ HỆ THỐNG">
-                        <TreeViewItem Header="1.1 Đơn vị hành chính" Tag="Admin_DonVi"/>
-                        <TreeViewItem Header="1.5 Quản lý người dùng" Tag="Admin_User"/>
+                    <TreeViewItem Header="1. QUẢN TRỊ HỆ THỐNG" IsExpanded="True">
+
+                        <TreeViewItem Header="1.1 Đơn vị hành chính">
+                            <TreeViewItem Header="Danh sách Quận/Huyện" Tag="Admin_Huyen"/>
+                            <TreeViewItem Header="Danh sách Xã/Phường" Tag="Admin_Xa"/>
+                        </TreeViewItem>
+
+                        <TreeViewItem Header="1.5 Quản lý người dùng" Tag="Admin_UserList"/>
                         <TreeViewItem Header="1.17 Lịch sử truy cập" Tag="Admin_History"/>
                     </TreeViewItem>
 
@@ -39,7 +45,7 @@
                         <TreeViewItem Header="2.1 Quy hoạch &amp; Bản đồ" Tag="Fac_Planning"/>
                         <TreeViewItem Header="2.2 Danh sách Công trình" Tag="Fac_List"/>
                         <TreeViewItem Header="2.2.15 Diện tích tưới" Tag="Fac_Irrigation"/>
-                        <TreeViewItem Header="2.2.22 Thống kê báo cáo" Tag="Fac_Report"/>
+                        <TreeViewItem Header="2.2.22 Thống kê báo cáo" Tag="Stat_Report"/>
                     </TreeViewItem>
                 </TreeView>
             </DockPanel>

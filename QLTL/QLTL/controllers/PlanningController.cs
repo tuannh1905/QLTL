@@ -1,45 +1,76 @@
 ﻿using MySql.Data.MySqlClient;
-using QLTL.models;
 using QLTL.database;
-using System.Collections.Generic;
+using QLTL.models;
 using System;
+using System.Collections.Generic;
+using System.Windows;
 
 namespace QLTL.controllers
 {
     public class PlanningController
     {
-        private Database _db = new Database();
+        private Database _db;
 
-        // 2.1.1 & 2.1.2: Lấy danh sách kỳ quy hoạch
-        public List<KyQuyHoach> GetAllPlanningPeriods()
+        public PlanningController()
         {
-            List<KyQuyHoach> list = new List<KyQuyHoach>();
-            if (_db.OpenConnection())
-            {
-                MySqlCommand cmd = new MySqlCommand("SELECT * FROM KyQuyHoach ORDER BY NamBatDau DESC", _db.Connection);
-                using (var reader = cmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        list.Add(new KyQuyHoach
-                        {
-                            KyID = reader.GetInt32("KyID"),
-                            TenKy = reader.GetString("TenKy"),
-                            NamBatDau = reader.GetInt32("NamBatDau"),
-                            NamKetThuc = reader.GetInt32("NamKetThuc")
-                        });
-                    }
-                }
-                _db.CloseConnection();
-            }
-            return list;
+            _db = new Database();
         }
 
-        // 2.1.4: Lấy bản đồ quy hoạch theo Kỳ
-        public List<BanDoQuyHoach> GetMapsByPeriod(int kyID)
+        // Hàm lấy danh sách tất cả các Kỳ quy hoạch
+        public List<Planning> GetAllPlannings()
         {
-            // Logic tương tự, SELECT * FROM BanDoQuyHoach WHERE KyID = ...
-            return new List<BanDoQuyHoach>(); // (Bạn tự viết chi tiết nhé)
+            List<Planning> list = new List<Planning>();
+
+            // Lấy dữ liệu sắp xếp theo năm mới nhất (NamBatDau giảm dần)
+            string query = "SELECT KyID, TenKy, NamBatDau, NamKetThuc FROM kyquyhoach ORDER BY NamBatDau DESC";
+
+            try
+            {
+                if (_db.OpenConnection())
+                {
+                    MySqlCommand cmd = new MySqlCommand(query, _db.Connection);
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Planning p = new Planning();
+
+                            // Map dữ liệu từ Database vào Model
+                            p.KyID = reader.GetInt32("KyID");
+                            p.TenKy = reader.GetString("TenKy");
+
+                            // Xử lý cột NamBatDau (Nếu trong DB để trống NULL thì gán bằng 0)
+                            if (!reader.IsDBNull(reader.GetOrdinal("NamBatDau")))
+                            {
+                                p.NamBatDau = reader.GetInt32("NamBatDau");
+                            }
+                            else
+                            {
+                                p.NamBatDau = 0;
+                            }
+
+                            // Xử lý cột NamKetThuc tương tự
+                            if (!reader.IsDBNull(reader.GetOrdinal("NamKetThuc")))
+                            {
+                                p.NamKetThuc = reader.GetInt32("NamKetThuc");
+                            }
+                            else
+                            {
+                                p.NamKetThuc = 0;
+                            }
+
+                            list.Add(p);
+                        }
+                    }
+                    _db.CloseConnection();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi lấy dữ liệu Quy hoạch: " + ex.Message);
+            }
+
+            return list;
         }
     }
 }

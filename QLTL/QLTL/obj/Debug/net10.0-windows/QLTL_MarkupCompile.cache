@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET10_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NET10_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 D:\kì 2025.1\QLTL\QLTL\App.xaml
-3-330252873
+101265886142
 
-1715079171
+30-197607661
 2132076373112
-constrution\CongTrinhPage.xaml;LoginWindow.xaml;views\MainWindow.xaml;
+constrution\CongTrinhPage.xaml;LoginWindow.xaml;views\AddUserWindow.xaml;views\DonViPage.xaml;views\HistoryPage.xaml;views\IrrigationPage.xaml;views\MainWindow.xaml;views\PlanningPage.xaml;views\ReportPage.xaml;views\userPage.xaml;
 
 False
 

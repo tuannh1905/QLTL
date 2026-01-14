@@ -1,64 +1,82 @@
-﻿using MySql.Data.MySqlClient;
-using QLTL.models;
+﻿using System.Collections.Generic;
+using MySql.Data.MySqlClient;
 using QLTL.database;
-using System.Collections.Generic;
+using QLTL.models;
+using System.Windows;
+using System;
 
 namespace QLTL.controllers
 {
     public class AdministrativeController
     {
-        private Database _db = new Database();
+        private Database _db;
 
-        // 1.1 & 1.2: Lấy danh sách và Tìm kiếm Huyện
-        public List<Huyen> GetHuyenList(string keyword = "")
+        public AdministrativeController()
         {
-            List<Huyen> list = new List<Huyen>();
-            string query = "SELECT * FROM Huyen";
-            if (!string.IsNullOrEmpty(keyword))
-                query += $" WHERE Ten LIKE '%{keyword}%'";
-
-            if (_db.OpenConnection())
-            {
-                MySqlCommand cmd = new MySqlCommand(query, _db.Connection);
-                using (var reader = cmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        list.Add(new Huyen
-                        {
-                            HuyenID = reader.GetInt32("HuyenID"),
-                            Ten = reader.GetString("Ten")
-                        });
-                    }
-                }
-                _db.CloseConnection();
-            }
-            return list;
+            _db = new Database();
         }
 
-        // 1.3 & 1.4: Lấy danh sách Xã theo Huyện
-        public List<Xa> GetXaList(int huyenID)
+        // Hàm này dùng chung cho cả trang Huyện và trang Xã
+        public List<DonVi> GetListDonVi(string type)
         {
-            List<Xa> list = new List<Xa>();
-            string query = $"SELECT * FROM Xa WHERE HuyenID = {huyenID}";
+            List<DonVi> list = new List<DonVi>();
+            string query = "";
 
-            if (_db.OpenConnection())
+            if (type == "Huyen")
             {
-                MySqlCommand cmd = new MySqlCommand(query, _db.Connection);
-                using (var reader = cmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        list.Add(new Xa
-                        {
-                            XaID = reader.GetInt32("XaID"),
-                            Ten = reader.GetString("Ten"),
-                            HuyenID = reader.GetInt32("HuyenID")
-                        });
-                    }
-                }
-                _db.CloseConnection();
+                // Lấy danh sách Huyện
+                // Giả định bảng tên là: Huyen (cột HuyenID, Ten)
+                query = "SELECT * FROM Huyen";
             }
+            else if (type == "Xa")
+            {
+                // Lấy danh sách Xã (Kèm tên Huyện để biết trực thuộc ai)
+                // Giả định bảng tên là: Xa (cột XaID, Ten, HuyenID)
+                // Dùng JOIN để lấy tên Huyện
+                query = "SELECT x.XaID, x.Ten AS TenXa, h.Ten AS TenHuyen " +
+                        "FROM Xa x " +
+                        "JOIN Huyen h ON x.HuyenID = h.HuyenID";
+            }
+
+            try
+            {
+                if (_db.OpenConnection())
+                {
+                    MySqlCommand cmd = new MySqlCommand(query, _db.Connection);
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            DonVi item = new DonVi();
+
+                            if (type == "Huyen")
+                            {
+                                // Map dữ liệu Huyện vào Model DonVi
+                                item.ID = reader.GetInt32("HuyenID");
+                                item.TenDonVi = reader.GetString("Ten"); // Cột tên là 'Ten'
+                                item.CapTren = "Tỉnh Hải Dương"; // Cấp trên của Huyện là Tỉnh
+                                item.MaDonVi = "H" + item.ID; // Tự sinh mã ví dụ
+                            }
+                            else
+                            {
+                                // Map dữ liệu Xã vào Model DonVi
+                                item.ID = reader.GetInt32("XaID");
+                                item.TenDonVi = reader.GetString("TenXa");
+                                item.CapTren = reader.GetString("TenHuyen"); // Cấp trên của Xã là Huyện
+                                item.MaDonVi = "X" + item.ID;
+                            }
+
+                            list.Add(item);
+                        }
+                    }
+                    _db.CloseConnection();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi lấy dữ liệu hành chính: " + ex.Message);
+            }
+
             return list;
         }
     }

@@ -1,8 +1,9 @@
 ﻿using MySql.Data.MySqlClient;
-using QLTL.models;
 using QLTL.database;
+using QLTL.models;
 using System;
-using System.Data;
+using System.Collections.Generic;
+using System.Windows;
 
 namespace QLTL.controllers
 {
@@ -15,155 +16,115 @@ namespace QLTL.controllers
             _db = new Database();
         }
 
-        // --- 1. ĐĂNG NHẬP (LOGIN) ---
-        public bool Login(string username, string password)
+        // --- 1. ĐĂNG NHẬP (Giữ nguyên) ---
+        public bool Login(string user, string pass)
         {
-            // Lưu ý: Thực tế nên mã hóa password (MD5/SHA256) trước khi so sánh
-            string query = "SELECT Count(*) FROM TaiKhoan WHERE TenDangNhap = @user AND MatKhau = @pass AND TrangThai = 'Active'";
-
-            if (_db.OpenConnection())
+            string query = "SELECT COUNT(*) FROM taikhoan WHERE TenDangNhap=@u AND MatKhau=@p";
+            try
             {
-                MySqlCommand cmd = new MySqlCommand(query, _db.Connection);
-                cmd.Parameters.AddWithValue("@user", username);
-                cmd.Parameters.AddWithValue("@pass", password); // Nếu DB đã mã hóa thì chỗ này phải mã hóa password nhập vào
-
-                long count = (long)cmd.ExecuteScalar();
-                _db.CloseConnection();
-                return count > 0;
-            }
-            return false;
-        }
-
-        // --- 2. ĐĂNG KÝ (REGISTER) - QUAN TRỌNG ---
-        // Nghiệp vụ: Đăng ký cần tạo hồ sơ trước -> lấy ID hồ sơ -> tạo tài khoản
-        // Phải dùng Transaction để đảm bảo nếu tạo TK lỗi thì không tạo Hồ sơ rác
-        public string Register(string username, string password, string fullname, string email)
-        {
-            if (_db.OpenConnection())
-            {
-                MySqlTransaction transaction = _db.Connection.BeginTransaction();
-                try
+                if (_db.OpenConnection())
                 {
-                    // Bước 1: Kiểm tra trùng tên đăng nhập
-                    MySqlCommand checkCmd = new MySqlCommand("SELECT Count(*) FROM TaiKhoan WHERE TenDangNhap = @user", _db.Connection, transaction);
-                    checkCmd.Parameters.AddWithValue("@user", username);
-                    if ((long)checkCmd.ExecuteScalar() > 0)
-                    {
-                        return "Tên đăng nhập đã tồn tại!";
-                    }
-
-                    // Bước 2: Tạo Hồ Sơ mới
-                    // Giả sử mặc định Exit_Status là false (0)
-                    string insertHoSo = @"INSERT INTO HoSo (HoTen, Email, Exit_Status) VALUES (@name, @email, 0); 
-                                          SELECT LAST_INSERT_ID();";
-
-                    MySqlCommand cmdHoSo = new MySqlCommand(insertHoSo, _db.Connection, transaction);
-                    cmdHoSo.Parameters.AddWithValue("@name", fullname);
-                    cmdHoSo.Parameters.AddWithValue("@email", email);
-
-                    // Lấy ID của hồ sơ vừa tạo
-                    int hosoId = Convert.ToInt32(cmdHoSo.ExecuteScalar());
-
-                    // Bước 3: Tạo Tài Khoản gắn với Hồ Sơ đó
-                    string insertTK = @"INSERT INTO TaiKhoan (TenDangNhap, MatKhau, TrangThai, HoSoID) 
-                                        VALUES (@user, @pass, 'Active', @hosoId)";
-
-                    MySqlCommand cmdTK = new MySqlCommand(insertTK, _db.Connection, transaction);
-                    cmdTK.Parameters.AddWithValue("@user", username);
-                    cmdTK.Parameters.AddWithValue("@pass", password);
-                    cmdTK.Parameters.AddWithValue("@hosoId", hosoId);
-                    cmdTK.ExecuteNonQuery();
-
-                    // Bước 4: (Tùy chọn) Phân quyền mặc định cho user mới (Ví dụ quyền Xem - ID 3)
-                    string insertQuyen = "INSERT INTO Quyen_TaiKhoan (TaiKhoanID, QuyenID) VALUES (@user, 3)";
-                    MySqlCommand cmdQuyen = new MySqlCommand(insertQuyen, _db.Connection, transaction);
-                    cmdQuyen.Parameters.AddWithValue("@user", username);
-                    cmdQuyen.ExecuteNonQuery();
-
-                    // Nếu mọi thứ ok thì Commit (Lưu thật)
-                    transaction.Commit();
+                    MySqlCommand cmd = new MySqlCommand(query, _db.Connection);
+                    cmd.Parameters.AddWithValue("@u", user);
+                    cmd.Parameters.AddWithValue("@p", pass);
+                    long count = (long)cmd.ExecuteScalar();
                     _db.CloseConnection();
-                    return "Success";
-                }
-                catch (Exception ex)
-                {
-                    // Có lỗi thì Rollback (Hoàn tác mọi thứ)
-                    transaction.Rollback();
-                    _db.CloseConnection();
-                    return "Lỗi đăng ký: " + ex.Message;
+                    return count > 0;
                 }
             }
-            return "Lỗi kết nối CSDL";
-        }
-
-        // --- 3. ĐỔI MẬT KHẨU (CHANGE PASSWORD) ---
-        public bool ChangePassword(string username, string oldPass, string newPass)
-        {
-            string query = "UPDATE TaiKhoan SET MatKhau = @newPass WHERE TenDangNhap = @user AND MatKhau = @oldPass";
-
-            if (_db.OpenConnection())
-            {
-                MySqlCommand cmd = new MySqlCommand(query, _db.Connection);
-                cmd.Parameters.AddWithValue("@user", username);
-                cmd.Parameters.AddWithValue("@oldPass", oldPass);
-                cmd.Parameters.AddWithValue("@newPass", newPass);
-
-                int result = cmd.ExecuteNonQuery();
-                _db.CloseConnection();
-
-                // Nếu result > 0 tức là update thành công (Username và Pass cũ đúng)
-                return result > 0;
-            }
+            catch (Exception ex) { MessageBox.Show("Lỗi đăng nhập: " + ex.Message); }
             return false;
         }
 
-        // --- 4. QUÊN MẬT KHẨU (FORGOT PASSWORD) ---
-        // Kiểm tra xem User và Email có khớp nhau không để cho phép reset
-        public bool CheckUserEmailMatch(string username, string email)
+        // --- 2. LẤY DANH SÁCH (NÂNG CẤP: JOIN VỚI BẢNG HỒ SƠ) ---
+        public List<User> GetAllUsers()
         {
-            string query = @"SELECT Count(*) FROM TaiKhoan tk 
-                             JOIN HoSo hs ON tk.HoSoID = hs.ID 
-                             WHERE tk.TenDangNhap = @user AND hs.Email = @email";
+            List<User> list = new List<User>();
 
-            if (_db.OpenConnection())
+            // CÂU LỆNH SQL MỚI: Kết nối bảng taikhoan (t) và hoso (h)
+            // Dùng LEFT JOIN để nếu tài khoản chưa có hồ sơ thì vẫn hiện ra (nhưng để trống tên)
+            string query = @"SELECT t.TenDangNhap, t.TrangThai, t.HoSoID, 
+                                    h.HoTen, h.Email, h.Chucnang 
+                             FROM taikhoan t 
+                             LEFT JOIN hoso h ON t.HoSoID = h.ID";
+
+            try
             {
-                MySqlCommand cmd = new MySqlCommand(query, _db.Connection);
-                cmd.Parameters.AddWithValue("@user", username);
-                cmd.Parameters.AddWithValue("@email", email);
-
-                long count = (long)cmd.ExecuteScalar();
-                _db.CloseConnection();
-                return count > 0;
-            }
-            return false;
-        }
-
-        // --- 5. LẤY THÔNG TIN USER (Đã có từ trước) ---
-        public HoSo GetUserInfo(string username)
-        {
-            HoSo userProfile = null;
-            string query = @"SELECT hs.* FROM HoSo hs 
-                             JOIN TaiKhoan tk ON hs.ID = tk.HoSoID 
-                             WHERE tk.TenDangNhap = @user";
-
-            if (_db.OpenConnection())
-            {
-                MySqlCommand cmd = new MySqlCommand(query, _db.Connection);
-                cmd.Parameters.AddWithValue("@user", username);
-                using (var reader = cmd.ExecuteReader())
+                if (_db.OpenConnection())
                 {
-                    if (reader.Read())
+                    MySqlCommand cmd = new MySqlCommand(query, _db.Connection);
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
-                        userProfile = new HoSo();
-                        userProfile.ID = reader.GetInt32("ID");
-                        userProfile.HoTen = reader.GetString("HoTen");
-                        userProfile.Email = reader.IsDBNull(reader.GetOrdinal("Email")) ? "" : reader.GetString("Email");
-                        // Thêm các trường khác...
+                        while (reader.Read())
+                        {
+                            User u = new User();
+
+                            // 1. Thông tin cơ bản từ bảng Tài khoản
+                            u.ID = !reader.IsDBNull(reader.GetOrdinal("HoSoID")) ? reader.GetInt32("HoSoID") : 0;
+                            u.Username = reader.GetString("TenDangNhap");
+
+                            string trangThai = !reader.IsDBNull(reader.GetOrdinal("TrangThai")) ? reader.GetString("TrangThai") : "";
+                            u.Exit_Status = (trangThai != "Active");
+
+                            // 2. Thông tin chi tiết từ bảng Hồ sơ (Xử lý cẩn thận nếu null)
+                            if (!reader.IsDBNull(reader.GetOrdinal("HoTen")))
+                            {
+                                u.HoTen = reader.GetString("HoTen");
+                            }
+                            else
+                            {
+                                u.HoTen = "Chưa cập nhật";
+                            }
+
+                            if (!reader.IsDBNull(reader.GetOrdinal("Email")))
+                            {
+                                u.Email = reader.GetString("Email");
+                            }
+                            else
+                            {
+                                u.Email = "";
+                            }
+
+                            if (!reader.IsDBNull(reader.GetOrdinal("Chucnang")))
+                            {
+                                u.ChucNang = reader.GetString("Chucnang");
+                            }
+                            else
+                            {
+                                u.ChucNang = "Nhân viên";
+                            }
+
+                            list.Add(u);
+                        }
                     }
+                    _db.CloseConnection();
                 }
-                _db.CloseConnection();
             }
-            return userProfile;
+            catch (Exception ex) { MessageBox.Show("Lỗi lấy DS User: " + ex.Message); }
+            return list;
+        }
+
+        // --- 3. THÊM MỚI (Giữ nguyên logic cũ, chỉ thêm vào bảng taikhoan) ---
+        // Lưu ý: Đúng quy trình là phải thêm vào bảng 'hoso' trước, lấy ID, rồi mới thêm vào 'taikhoan'.
+        // Nhưng tạm thời để đơn giản ta cứ thêm tài khoản trước, HoSoID để 0 hoặc NULL.
+        public bool AddUser(User u)
+        {
+            string query = "INSERT INTO taikhoan (TenDangNhap, MatKhau, TrangThai) VALUES (@user, @pass, 'Active')";
+            try
+            {
+                if (_db.OpenConnection())
+                {
+                    MySqlCommand cmd = new MySqlCommand(query, _db.Connection);
+                    cmd.Parameters.AddWithValue("@user", u.Username);
+                    cmd.Parameters.AddWithValue("@pass", "123456");
+
+                    int result = cmd.ExecuteNonQuery();
+                    _db.CloseConnection();
+                    return result > 0;
+                }
+            }
+            catch (Exception ex) { MessageBox.Show("Lỗi thêm User: " + ex.Message); }
+            return false;
         }
     }
 }

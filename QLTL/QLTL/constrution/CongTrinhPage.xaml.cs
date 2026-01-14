@@ -1,23 +1,29 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using QLTL.controllers; // Gọi Controller để lấy dữ liệu
-using QLTL.models;
+using QLTL.controllers;
 using System.Collections.Generic;
 
 namespace QLTL.views
 {
     public partial class CongTrinhPage : Page
     {
-        // Khai báo Controller
         private FacilityController _controller;
+        private string _loaiCongTrinh; // Biến lưu loại công trình hiện tại (VD: Trạm bơm)
 
-        public CongTrinhPage()
+        // Sửa Constructor để nhận tham số loại công trình
+        public CongTrinhPage(string loaiCongTrinh = "")
         {
             InitializeComponent();
-            _controller = new FacilityController(); // Khởi tạo controller
+            _controller = new FacilityController();
+            _loaiCongTrinh = loaiCongTrinh;
+
+            // Đổi tiêu đề trang cho đúng nghiệp vụ
+            if (!string.IsNullOrEmpty(_loaiCongTrinh))
+                lblTitle.Text = "DANH SÁCH " + _loaiCongTrinh.ToUpper();
+            else
+                lblTitle.Text = "TOÀN BỘ CÔNG TRÌNH THỦY LỢI";
         }
 
-        // Hàm này chạy ngay khi trang được mở lên (nhờ lệnh Loaded="Page_Loaded" bên XAML)
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             LoadData();
@@ -27,16 +33,14 @@ namespace QLTL.views
         {
             try
             {
-                // Gọi hàm SearchFacilities(null, "") nghĩa là lấy TẤT CẢ, không lọc gì cả
-                List<CongTrinhThuyLoi> list = _controller.SearchFacilities(null, "");
-
-                // Đổ dữ liệu vào bảng
+                // Truyền _loaiCongTrinh vào hàm tìm kiếm để lọc
+                // Tham số thứ 2 là từ khóa tìm kiếm (đang để trống)
+                var list = _controller.SearchFacilities(_loaiCongTrinh, "");
                 dtgCongTrinh.ItemsSource = list;
             }
             catch
             {
-                // Nếu chưa cài Database hoặc lỗi kết nối thì báo nhẹ 1 câu
-                // MessageBox.Show("Chưa lấy được dữ liệu. Kiểm tra lại kết nối Database!");
+                // Xử lý lỗi lặng lẽ hoặc log ra file
             }
         }
     }

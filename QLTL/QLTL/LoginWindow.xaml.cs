@@ -28,6 +28,20 @@ namespace QLTL
             // Gọi hàm Login kiểm tra trong Database
             if (_userController.Login(u, p))
             {
+                // --- ĐOẠN CODE MỚI THÊM: GHI LỊCH SỬ ĐĂNG NHẬP ---
+                HistoryController historyCtrl = new HistoryController();
+
+                // 1. Tạo phiên làm việc mới (Ghi vào bảng lichsudangnhap)
+                // Hàm StartSession() trả về ID phiên -> Lưu vào biến toàn cục
+                App.CurrentSessionID = historyCtrl.StartSession();
+
+                // 2. Lưu tên người dùng hiện tại để dùng cho các màn hình khác
+                App.CurrentUser = u;
+
+                // 3. Ghi log hành động "Đăng nhập" vào bảng lichsuthaotac
+                historyCtrl.AddActivity(u, "Đăng nhập hệ thống");
+                // -----------------------------------------------------
+
                 MessageBox.Show("Đăng nhập thành công!", "Thông báo");
 
                 // Mở màn hình chính

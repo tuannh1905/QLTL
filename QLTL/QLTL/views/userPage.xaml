@@ -1,0 +1,30 @@
+﻿<Page x:Class="QLTL.views.UserPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Quản lý người dùng" Loaded="Page_Loaded">
+    <Grid Margin="20" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="QUẢN LÝ DANH SÁCH NGƯỜI DÙNG" FontSize="24" FontWeight="Bold" 
+                   Foreground="#E67E22" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,10">
+            <Button Content="+ Thêm mới" Width="100" Height="30" Background="#27AE60" Foreground="White" FontWeight="Bold" Margin="0,0,10,0"/>
+            <Button Content="Xóa chọn" Width="100" Height="30" Background="#C0392B" Foreground="White" FontWeight="Bold"/>
+        </StackPanel>
+
+        <DataGrid x:Name="dtgUsers" Grid.Row="2" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" RowHeight="35">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="50"/>
+                <DataGridTextColumn Header="Tài khoản" Binding="{Binding Username}" Width="100" FontWeight="Bold"/>
+                <DataGridTextColumn Header="Họ và Tên" Binding="{Binding HoTen}" Width="200"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="200"/>
+                <DataGridTextColumn Header="Chức vụ" Binding="{Binding ChucNang}" Width="150"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

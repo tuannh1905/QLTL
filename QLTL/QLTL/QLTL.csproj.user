@@ -8,5 +8,26 @@
     <Compile Update="LoginWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="views\AddUserWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\DonViPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\HistoryPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\IrrigationPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\PlanningPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\ReportPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\userPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
