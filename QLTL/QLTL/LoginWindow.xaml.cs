@@ -19,30 +19,38 @@ namespace QLTL
             string u = txtUser.Text;
             string p = txtPass.Password;
 
+            // 1. Kiểm tra nhập liệu
             if (string.IsNullOrEmpty(u) || string.IsNullOrEmpty(p))
             {
-                lblError.Text = "Vui lòng nhập đủ thông tin!";
+                // Lưu ý: Nếu lblError bên XAML là TextBlock thì dùng .Text, là Label thì dùng .Content
+                if (lblError != null) lblError.Text = "Vui lòng nhập đủ thông tin!";
                 return;
             }
 
-            // Gọi hàm Login kiểm tra trong Database
+            // 2. Gọi hàm Login kiểm tra trong Database
             if (_userController.Login(u, p))
             {
-                // --- ĐOẠN CODE MỚI THÊM: GHI LỊCH SỬ ĐĂNG NHẬP ---
+                // --- A. GHI LỊCH SỬ HỆ THỐNG ---
                 HistoryController historyCtrl = new HistoryController();
 
-                // 1. Tạo phiên làm việc mới (Ghi vào bảng lichsudangnhap)
-                // Hàm StartSession() trả về ID phiên -> Lưu vào biến toàn cục
+                // Tạo phiên làm việc mới -> Lưu ID phiên vào biến toàn cục
                 App.CurrentSessionID = historyCtrl.StartSession();
 
-                // 2. Lưu tên người dùng hiện tại để dùng cho các màn hình khác
+                // Lưu tên người dùng hiện tại
                 App.CurrentUser = u;
 
-                // 3. Ghi log hành động "Đăng nhập" vào bảng lichsuthaotac
-                historyCtrl.AddActivity(u, "Đăng nhập hệ thống");
-                // -----------------------------------------------------
+                // --- B. QUAN TRỌNG: LẤY CHỨC VỤ (ROLE) ---
+                // Gọi hàm GetUserRole vừa viết trong UserController
+                App.CurrentRole = _userController.GetUserRole(u);
+                // ------------------------------------------
 
-                MessageBox.Show("Đăng nhập thành công!", "Thông báo");
+                // Ghi log hành động "Đăng nhập"
+                historyCtrl.AddActivity(u, "Đăng nhập hệ thống");
+
+
+                // --- C. THÔNG BÁO VÀ CHUYỂN MÀN HÌNH ---
+                // Hiển thị luôn vai trò để kiểm tra xem code chạy đúng chưa
+                MessageBox.Show($"Đăng nhập thành công!\nXin chào: {u}\nVai trò: {App.CurrentRole}", "Thông báo");
 
                 // Mở màn hình chính
                 MainWindow main = new MainWindow();
@@ -53,7 +61,7 @@ namespace QLTL
             }
             else
             {
-                lblError.Text = "Sai tài khoản hoặc mật khẩu!";
+                if (lblError != null) lblError.Text = "Sai tài khoản hoặc mật khẩu!";
             }
         }
     }

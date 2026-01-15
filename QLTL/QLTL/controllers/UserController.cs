@@ -126,5 +126,96 @@ namespace QLTL.controllers
             catch (Exception ex) { MessageBox.Show("Lỗi thêm User: " + ex.Message); }
             return false;
         }
+        // --- 4. LẤY CHỨC VỤ CỦA USER ---
+        public string GetUserRole(string username)
+        {
+            string role = "Nhân viên"; // Mặc định nếu không tìm thấy thì là nhân viên quèn
+
+            // Kết nối bảng Tài khoản sang bảng Hồ sơ để lấy cột 'Chucnang'
+            string query = @"SELECT h.Chucnang 
+                     FROM taikhoan t 
+                     JOIN hoso h ON t.HoSoID = h.ID 
+                     WHERE t.TenDangNhap = @user";
+            try
+            {
+                if (_db.OpenConnection())
+                {
+                    MySqlCommand cmd = new MySqlCommand(query, _db.Connection);
+                    cmd.Parameters.AddWithValue("@user", username);
+
+                    object result = cmd.ExecuteScalar();
+                    if (result != null)
+                    {
+                        role = result.ToString();
+                    }
+                    _db.CloseConnection();
+                }
+            }
+            catch (Exception) { }
+            return role;
+        }
+        // --- HÀM THÊM MỚI ĐẦY ĐỦ (Hồ sơ + Tài khoản) ---
+        public bool AddUserFull(string username, string password, string fullname, string email, string role)
+        {
+            // 1. Thêm vào bảng Hồ sơ trước để lấy ID
+            string queryHoSo = "INSERT INTO hoso (HoTen, Email, Chucnang) VALUES (@ten, @mail, @chucvu); SELECT LAST_INSERT_ID();";
+
+            int hosoID = 0;
+
+            try
+            {
+                if (_db.OpenConnection())
+                {
+                    // A. Insert Hồ sơ
+                    MySqlCommand cmd1 = new MySqlCommand(queryHoSo, _db.Connection);
+                    cmd1.Parameters.AddWithValue("@ten", fullname);
+                    cmd1.Parameters.AddWithValue("@mail", email);
+                    cmd1.Parameters.AddWithValue("@chucvu", role);
+
+                    // Lấy ID vừa tạo (ExecuteScalar trả về ID của dòng vừa insert)
+                    object result = cmd1.ExecuteScalar();
+                    if (result != null) hosoID = Convert.ToInt32(result);
+
+                    // B. Insert Tài khoản (kèm HoSoID vừa lấy được)
+                    if (hosoID > 0)
+                    {
+                        string queryTK = "INSERT INTO taikhoan (TenDangNhap, MatKhau, TrangThai, HoSoID) VALUES (@user, @pass, 'Active', @hid)";
+                        MySqlCommand cmd2 = new MySqlCommand(queryTK, _db.Connection);
+                        cmd2.Parameters.AddWithValue("@user", username);
+                        cmd2.Parameters.AddWithValue("@pass", password);
+                        cmd2.Parameters.AddWithValue("@hid", hosoID);
+
+                        cmd2.ExecuteNonQuery();
+                    }
+
+                    _db.CloseConnection();
+                    return true; // Thành công
+                }
+            }
+            catch (Exception ex) { MessageBox.Show("Lỗi thêm user: " + ex.Message); }
+            return false;
+        }
+        // --- 5. XÓA NGƯỜI DÙNG ---
+        public bool DeleteUser(string username)
+        {
+            // Lưu ý: Ở đây ta chỉ xóa trong bảng 'taikhoan' để họ không đăng nhập được nữa.
+            // Dữ liệu trong bảng 'hoso' vẫn giữ lại để lưu lịch sử (hoặc bạn có thể xóa cả 2 nếu muốn).
+            string query = "DELETE FROM taikhoan WHERE TenDangNhap = @user";
+
+            try
+            {
+                if (_db.OpenConnection())
+                {
+                    MySqlCommand cmd = new MySqlCommand(query, _db.Connection);
+                    cmd.Parameters.AddWithValue("@user", username);
+
+                    int result = cmd.ExecuteNonQuery();
+                    _db.CloseConnection();
+                    return result > 0;
+                }
+            }
+            catch (Exception ex) { MessageBox.Show("Lỗi xóa người dùng: " + ex.Message); }
+            return false;
+        }
     }
 }

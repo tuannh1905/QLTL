@@ -1,41 +1,53 @@
-﻿using System.Windows;
+﻿using QLTL.controllers;
+using System.Windows;
 using System.Windows.Controls;
-using QLTL.controllers;
-using QLTL.models;
+using System.Xml.Linq;
 
 namespace QLTL.views
 {
     public partial class AddUserWindow : Window
     {
-        private UserController _controller;
+        // --- ĐÂY LÀ BIẾN BẠN ĐANG THIẾU ---
+        public bool IsSuccess = false;
+        // -----------------------------------
 
         public AddUserWindow()
         {
             InitializeComponent();
-            _controller = new UserController();
         }
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
-            // 1. Kiểm tra nhập liệu
-            if (string.IsNullOrEmpty(txtUser.Text) || string.IsNullOrEmpty(txtHoTen.Text))
+            // 1. Kiểm tra rỗng
+            if (string.IsNullOrWhiteSpace(txtUser.Text) || string.IsNullOrWhiteSpace(txtName.Text))
             {
                 MessageBox.Show("Vui lòng nhập Tên đăng nhập và Họ tên!");
                 return;
             }
 
-            // 2. Tạo đối tượng User
-            User newUser = new User();
-            newUser.Username = txtUser.Text;
-            newUser.HoTen = txtHoTen.Text;
-            newUser.Email = txtEmail.Text;
-            newUser.ChucNang = cbRole.Text;
+            // 2. Gọi Controller lưu vào DB
+            UserController userCtrl = new UserController();
 
-            // 3. Gọi Controller để lưu
-            if (_controller.AddUser(newUser))
+            // Lấy chức vụ từ ComboBox (xử lý tránh null)
+            string role = "Nhân viên";
+            if (cbRole.SelectedItem is ComboBoxItem item)
             {
-                MessageBox.Show("Thêm thành công! Mật khẩu mặc định là: 123456");
-                this.Close(); // Đóng cửa sổ nhập
+                role = item.Content.ToString();
+            }
+
+            if (userCtrl.AddUserFull(txtUser.Text, txtPass.Password, txtName.Text, txtEmail.Text, role))
+            {
+                MessageBox.Show("Thêm mới thành công!");
+
+                // --- ĐÁNH DẤU LÀ THÀNH CÔNG ĐỂ USERPAGE BIẾT ---
+                IsSuccess = true;
+                // -----------------------------------------------
+
+                this.Close(); // Đóng cửa sổ
+            }
+            else
+            {
+                MessageBox.Show("Thêm thất bại (Có thể trùng tên đăng nhập)!");
             }
         }
 

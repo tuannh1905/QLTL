@@ -60,7 +60,7 @@ namespace QLTL.views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/QLTL;component/views/reportpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/QLTL;V1.0.0.0;component/views/reportpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\views\ReportPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

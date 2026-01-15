@@ -13,17 +13,29 @@
                    Foreground="#E67E22" HorizontalAlignment="Center" Margin="0,0,0,20"/>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,10">
-            <Button Content="+ Thêm mới" Width="100" Height="30" Background="#27AE60" Foreground="White" FontWeight="Bold" Margin="0,0,10,0"/>
-            <Button Content="Xóa chọn" Width="100" Height="30" Background="#C0392B" Foreground="White" FontWeight="Bold"/>
+            <Button x:Name="btnAdd" 
+                    Content="+ Thêm mới" 
+                    Width="100" Height="30" 
+                    Background="#27AE60" Foreground="White" FontWeight="Bold" 
+                    Margin="0,0,10,0"
+                    Click="BtnAdd_Click"/>
+
+            <Button x:Name="btnDelete"
+                    Content="Xóa chọn" 
+                    Width="100" Height="30" 
+                    Background="#C0392B" Foreground="White" FontWeight="Bold"
+                    Click="BtnDelete_Click"/>
         </StackPanel>
 
-        <DataGrid x:Name="dtgUsers" Grid.Row="2" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" RowHeight="35">
+        <DataGrid x:Name="dtgUsers" Grid.Row="2" 
+                  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" 
+                  RowHeight="35" FontSize="14">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="50"/>
-                <DataGridTextColumn Header="Tài khoản" Binding="{Binding Username}" Width="100" FontWeight="Bold"/>
+                <DataGridTextColumn Header="Tài khoản" Binding="{Binding Username}" Width="150" FontWeight="Bold"/>
                 <DataGridTextColumn Header="Họ và Tên" Binding="{Binding HoTen}" Width="200"/>
-                <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="200"/>
-                <DataGridTextColumn Header="Chức vụ" Binding="{Binding ChucNang}" Width="150"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="250"/>
+                <DataGridTextColumn Header="Chức vụ" Binding="{Binding ChucNang}" Width="170"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

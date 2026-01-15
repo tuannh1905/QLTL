@@ -16,5 +16,6 @@ namespace QLTL
 
         // 2. Lưu tên người dùng hiện tại (để hiển thị "Xin chào..." hoặc ghi log)
         public static string CurrentUser = "";
+        public static string CurrentRole = "";
     }
 }

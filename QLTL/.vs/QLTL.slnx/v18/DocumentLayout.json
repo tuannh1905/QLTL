@@ -3,6 +3,46 @@
   "WorkspaceRootPath": "D:\\k\u00EC 2025.1\\QLTL\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|d:\\k\u00EC 2025.1\\qltl\\qltl\\views\\userpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|solutionrelative:qltl\\views\\userpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|d:\\k\u00EC 2025.1\\qltl\\qltl\\views\\userpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|solutionrelative:qltl\\views\\userpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|d:\\k\u00EC 2025.1\\qltl\\qltl\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|solutionrelative:qltl\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|d:\\k\u00EC 2025.1\\qltl\\qltl\\views\\adduserwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|solutionrelative:qltl\\views\\adduserwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|d:\\k\u00EC 2025.1\\qltl\\qltl\\views\\adduserwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|solutionrelative:qltl\\views\\adduserwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|d:\\k\u00EC 2025.1\\qltl\\qltl\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|solutionrelative:qltl\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|d:\\k\u00EC 2025.1\\qltl\\qltl\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|solutionrelative:qltl\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|d:\\k\u00EC 2025.1\\qltl\\qltl\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|solutionrelative:qltl\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|d:\\k\u00EC 2025.1\\qltl\\qltl\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|solutionrelative:qltl\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|d:\\k\u00EC 2025.1\\qltl\\qltl\\views\\reportpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|solutionrelative:qltl\\views\\reportpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|d:\\k\u00EC 2025.1\\qltl\\qltl\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|solutionrelative:qltl\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -11,20 +51,8 @@
       "RelativeMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|solutionrelative:qltl\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|d:\\k\u00EC 2025.1\\qltl\\qltl\\views\\reportpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|solutionrelative:qltl\\views\\reportpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|d:\\k\u00EC 2025.1\\qltl\\qltl\\views\\userpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|solutionrelative:qltl\\views\\userpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|d:\\k\u00EC 2025.1\\qltl\\qltl\\views\\reportpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|solutionrelative:qltl\\views\\reportpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|d:\\k\u00EC 2025.1\\qltl\\qltl\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|solutionrelative:qltl\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|d:\\k\u00EC 2025.1\\qltl\\qltl\\models\\report.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -45,10 +73,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|d:\\k\u00EC 2025.1\\qltl\\qltl\\models\\irrigation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|solutionrelative:qltl\\models\\irrigation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|d:\\k\u00EC 2025.1\\qltl\\qltl\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|solutionrelative:qltl\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|d:\\k\u00EC 2025.1\\qltl\\qltl\\views\\planningpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -75,36 +99,12 @@
       "RelativeMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|solutionrelative:qltl\\views\\historypage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|d:\\k\u00EC 2025.1\\qltl\\qltl\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|solutionrelative:qltl\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|d:\\k\u00EC 2025.1\\qltl\\qltl\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|solutionrelative:qltl\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|d:\\k\u00EC 2025.1\\qltl\\qltl\\models\\history.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|solutionrelative:qltl\\models\\history.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|d:\\k\u00EC 2025.1\\qltl\\qltl\\controllers\\historycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|solutionrelative:qltl\\controllers\\historycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|d:\\k\u00EC 2025.1\\qltl\\qltl\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|solutionrelative:qltl\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|d:\\k\u00EC 2025.1\\qltl\\qltl\\views\\userpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|solutionrelative:qltl\\views\\userpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|d:\\k\u00EC 2025.1\\qltl\\qltl\\views\\adduserwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|solutionrelative:qltl\\views\\adduserwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|d:\\k\u00EC 2025.1\\qltl\\qltl\\views\\adduserwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|solutionrelative:qltl\\views\\adduserwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EB1D1A6F-8A10-FE88-1C75-9795C118A543}|QLTL\\QLTL.csproj|d:\\k\u00EC 2025.1\\qltl\\qltl\\views\\donvipage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -173,70 +173,33 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "QLTL\\views\\MainWindow.xaml.cs",
-              "ToolTip": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\MainWindow.xaml.cs",
-              "RelativeToolTip": "QLTL\\views\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAAAFAAAAAeAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "QLTL\\controllers\\UserController.cs",
+              "ToolTip": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\controllers\\UserController.cs",
+              "RelativeToolTip": "QLTL\\controllers\\UserController.cs",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAAANoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-13T01:29:03.009Z",
+              "WhenOpened": "2026-01-13T03:10:28.123Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "QLTL\\views\\MainWindow.xaml",
-              "ToolTip": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\MainWindow.xaml",
-              "RelativeToolTip": "QLTL\\views\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-13T01:29:04.026Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ReportPage.xaml",
-              "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\ReportPage.xaml",
-              "RelativeDocumentMoniker": "QLTL\\views\\ReportPage.xaml",
-              "ToolTip": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\ReportPage.xaml",
-              "RelativeToolTip": "QLTL\\views\\ReportPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-14T10:04:17.106Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ReportPage.xaml.cs",
-              "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\ReportPage.xaml.cs",
-              "RelativeDocumentMoniker": "QLTL\\views\\ReportPage.xaml.cs",
-              "ToolTip": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\ReportPage.xaml.cs",
-              "RelativeToolTip": "QLTL\\views\\ReportPage.xaml.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAIwBYAAAABAAAAAAAAAA==",
+              "Title": "userPage.xaml.cs",
+              "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\userPage.xaml.cs",
+              "RelativeDocumentMoniker": "QLTL\\views\\userPage.xaml.cs",
+              "ToolTip": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\userPage.xaml.cs",
+              "RelativeToolTip": "QLTL\\views\\userPage.xaml.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAAAGwAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-14T10:05:12.832Z",
+              "WhenOpened": "2026-01-13T09:38:09.029Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ReportController.cs",
-              "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\controllers\\ReportController.cs",
-              "RelativeDocumentMoniker": "QLTL\\controllers\\ReportController.cs",
-              "ToolTip": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\controllers\\ReportController.cs",
-              "RelativeToolTip": "QLTL\\controllers\\ReportController.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAIwD8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-14T10:03:37.961Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "userPage.xaml",
               "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\userPage.xaml",
               "RelativeDocumentMoniker": "QLTL\\views\\userPage.xaml",
@@ -248,7 +211,105 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AddUserWindow.xaml.cs",
+              "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\AddUserWindow.xaml.cs",
+              "RelativeDocumentMoniker": "QLTL\\views\\AddUserWindow.xaml.cs",
+              "ToolTip": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\AddUserWindow.xaml.cs",
+              "RelativeToolTip": "QLTL\\views\\AddUserWindow.xaml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAlwA8AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T15:35:27.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AddUserWindow.xaml",
+              "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\AddUserWindow.xaml",
+              "RelativeDocumentMoniker": "QLTL\\views\\AddUserWindow.xaml",
+              "ToolTip": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\AddUserWindow.xaml",
+              "RelativeToolTip": "QLTL\\views\\AddUserWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-13T15:34:59.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginWindow.xaml.cs",
+              "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\LoginWindow.xaml.cs",
+              "RelativeDocumentMoniker": "QLTL\\LoginWindow.xaml.cs",
+              "ToolTip": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\LoginWindow.xaml.cs",
+              "RelativeToolTip": "QLTL\\LoginWindow.xaml.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAuwEMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T03:27:45.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\App.xaml.cs",
+              "RelativeDocumentMoniker": "QLTL\\App.xaml.cs",
+              "ToolTip": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\App.xaml.cs",
+              "RelativeToolTip": "QLTL\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T09:01:43.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "LoginWindow.xaml",
+              "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\LoginWindow.xaml",
+              "RelativeDocumentMoniker": "QLTL\\LoginWindow.xaml",
+              "ToolTip": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\LoginWindow.xaml",
+              "RelativeToolTip": "QLTL\\LoginWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-13T03:18:09.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "QLTL\\views\\MainWindow.xaml",
+              "ToolTip": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\MainWindow.xaml",
+              "RelativeToolTip": "QLTL\\views\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-13T01:29:04.026Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ReportPage.xaml.cs",
+              "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\ReportPage.xaml.cs",
+              "RelativeDocumentMoniker": "QLTL\\views\\ReportPage.xaml.cs",
+              "ToolTip": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\ReportPage.xaml.cs",
+              "RelativeToolTip": "QLTL\\views\\ReportPage.xaml.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAIwBYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T10:05:12.832Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ReportController.cs",
+              "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\controllers\\ReportController.cs",
+              "RelativeDocumentMoniker": "QLTL\\controllers\\ReportController.cs",
+              "ToolTip": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\controllers\\ReportController.cs",
+              "RelativeToolTip": "QLTL\\controllers\\ReportController.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAIwD8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T10:03:37.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "IrrigationControllers.cs",
               "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\controllers\\IrrigationControllers.cs",
               "RelativeDocumentMoniker": "QLTL\\controllers\\IrrigationControllers.cs",
@@ -256,12 +317,11 @@
               "RelativeToolTip": "QLTL\\controllers\\IrrigationControllers.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAAABgAAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-13T03:04:53.279Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-13T03:04:53.279Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "report.cs",
               "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\models\\report.cs",
               "RelativeDocumentMoniker": "QLTL\\models\\report.cs",
@@ -269,12 +329,34 @@
               "RelativeToolTip": "QLTL\\models\\report.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-13T02:43:27.827Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-13T02:43:27.827Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
+              "Title": "ReportPage.xaml",
+              "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\ReportPage.xaml",
+              "RelativeDocumentMoniker": "QLTL\\views\\ReportPage.xaml",
+              "ToolTip": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\ReportPage.xaml",
+              "RelativeToolTip": "QLTL\\views\\ReportPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-14T10:04:17.106Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "QLTL\\views\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\MainWindow.xaml.cs",
+              "RelativeToolTip": "QLTL\\views\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAFAAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T01:29:03.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "IrrigationPage.xaml.cs",
               "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\IrrigationPage.xaml.cs",
               "RelativeDocumentMoniker": "QLTL\\views\\IrrigationPage.xaml.cs",
@@ -282,24 +364,22 @@
               "RelativeToolTip": "QLTL\\views\\IrrigationPage.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAIwBUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-14T09:40:59.624Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-14T09:40:59.624Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "IrrigationPage.xaml",
               "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\IrrigationPage.xaml",
               "RelativeDocumentMoniker": "QLTL\\views\\IrrigationPage.xaml",
               "ToolTip": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\IrrigationPage.xaml",
               "RelativeToolTip": "QLTL\\views\\IrrigationPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-14T09:40:31.336Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-14T09:40:31.336Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
               "Title": "Irrigation.cs",
               "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\models\\Irrigation.cs",
               "RelativeDocumentMoniker": "QLTL\\models\\Irrigation.cs",
@@ -307,25 +387,11 @@
               "RelativeToolTip": "QLTL\\models\\Irrigation.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-14T09:37:57.179Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-14T09:37:57.179Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "QLTL\\controllers\\UserController.cs",
-              "ToolTip": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\controllers\\UserController.cs",
-              "RelativeToolTip": "QLTL\\controllers\\UserController.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAADwv3kAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-13T03:10:28.123Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 18,
               "Title": "PlanningPage.xaml.cs",
               "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\PlanningPage.xaml.cs",
               "RelativeDocumentMoniker": "QLTL\\views\\PlanningPage.xaml.cs",
@@ -337,7 +403,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 21,
               "Title": "Planning.cs",
               "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\models\\Planning.cs",
               "RelativeDocumentMoniker": "QLTL\\models\\Planning.cs",
@@ -349,7 +415,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 19,
               "Title": "PlanningPage.xaml",
               "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\PlanningPage.xaml",
               "RelativeDocumentMoniker": "QLTL\\views\\PlanningPage.xaml",
@@ -360,7 +426,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 22,
               "Title": "HistoryPage.xaml.cs",
               "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\HistoryPage.xaml.cs",
               "RelativeDocumentMoniker": "QLTL\\views\\HistoryPage.xaml.cs",
@@ -372,7 +438,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 20,
               "Title": "PlanningController.cs",
               "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\controllers\\PlanningController.cs",
               "RelativeDocumentMoniker": "QLTL\\controllers\\PlanningController.cs",
@@ -384,7 +450,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 23,
               "Title": "HistoryPage.xaml",
               "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\HistoryPage.xaml",
               "RelativeDocumentMoniker": "QLTL\\views\\HistoryPage.xaml",
@@ -395,7 +461,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "History.cs",
               "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\models\\History.cs",
               "RelativeDocumentMoniker": "QLTL\\models\\History.cs",
@@ -407,7 +473,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "HistoryController.cs",
               "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\controllers\\HistoryController.cs",
               "RelativeDocumentMoniker": "QLTL\\controllers\\HistoryController.cs",
@@ -416,76 +482,6 @@
               "ViewState": "AgIAAE8AAAAAAAAAAAAwwFoAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-14T00:40:50.686Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "LoginWindow.xaml.cs",
-              "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\LoginWindow.xaml.cs",
-              "RelativeDocumentMoniker": "QLTL\\LoginWindow.xaml.cs",
-              "ToolTip": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\LoginWindow.xaml.cs",
-              "RelativeToolTip": "QLTL\\LoginWindow.xaml.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAIwDsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-13T03:27:45.793Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "LoginWindow.xaml",
-              "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\LoginWindow.xaml",
-              "RelativeDocumentMoniker": "QLTL\\LoginWindow.xaml",
-              "ToolTip": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\LoginWindow.xaml",
-              "RelativeToolTip": "QLTL\\LoginWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-13T03:18:09.037Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\App.xaml.cs",
-              "RelativeDocumentMoniker": "QLTL\\App.xaml.cs",
-              "ToolTip": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\App.xaml.cs",
-              "RelativeToolTip": "QLTL\\App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-13T09:01:43.956Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "userPage.xaml.cs",
-              "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\userPage.xaml.cs",
-              "RelativeDocumentMoniker": "QLTL\\views\\userPage.xaml.cs",
-              "ToolTip": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\userPage.xaml.cs",
-              "RelativeToolTip": "QLTL\\views\\userPage.xaml.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAuwDMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-13T09:38:09.029Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "AddUserWindow.xaml.cs",
-              "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\AddUserWindow.xaml.cs",
-              "RelativeDocumentMoniker": "QLTL\\views\\AddUserWindow.xaml.cs",
-              "ToolTip": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\AddUserWindow.xaml.cs",
-              "RelativeToolTip": "QLTL\\views\\AddUserWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-13T15:35:27.898Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "AddUserWindow.xaml",
-              "DocumentMoniker": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\AddUserWindow.xaml",
-              "RelativeDocumentMoniker": "QLTL\\views\\AddUserWindow.xaml",
-              "ToolTip": "D:\\k\u00EC 2025.1\\QLTL\\QLTL\\views\\AddUserWindow.xaml",
-              "RelativeToolTip": "QLTL\\views\\AddUserWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-13T15:34:59.436Z"
             },
             {
               "$type": "Document",
